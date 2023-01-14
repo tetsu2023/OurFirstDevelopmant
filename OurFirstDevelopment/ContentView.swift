@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    //アラートどこかのタイミングで出そうかな
+    @State var showAlert = false
+    
     var body: some View {
         VStack {
-            Text("aaaa")
+            //画像
+            Image("gu")
+                .resizable()
+                .scaledToFit()
+            //.padding()
+            
+            //テキスト
+            Text("Rock")
+                .padding()
+            
+            //button
+            
+            Button{
+                print("ボタンが押された")
+            } label:{
+                Text("Let's play")
+            }
         }
-        .padding()
     }
 }
 
