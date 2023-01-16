@@ -73,7 +73,6 @@ struct ContentView: View {
                     //ランダムに数字の算出
                     newAnswerNumber = Int.random(in: 1...3)
                     
-                    
                 }
                 //結果が異なる場合、repeatを抜ける
                 while answerNumber == newAnswerNumber
@@ -83,6 +82,11 @@ struct ContentView: View {
                 
             } label:{
                 Text("Let's play")
+                    .frame(maxWidth: .infinity)
+                    .frame(minHeight: 100)
+                    .font(.title)
+                    .background(.pink)
+                    .foregroundColor(.white)
             }
         }
     }
