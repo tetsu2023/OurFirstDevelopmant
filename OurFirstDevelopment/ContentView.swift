@@ -16,9 +16,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
+            Spacer()
             //じゃんけんの数字が0の場合
             if answerNumber == 0 {
                 Text("これからじゃんけんをします")
+                    .padding(.bottom)
             } else if answerNumber == 1 {
                 //じゃんけんの数字が1の場合、グーの画像を指定
                 
@@ -26,11 +28,12 @@ struct ContentView: View {
                 Image("gu")
                     .resizable()
                     .scaledToFit()
-                //.padding()
+                
+                Spacer()
                 
                 //テキスト
                 Text("Rock")
-                    .padding()
+                    .padding(.bottom)
                 
             } else if answerNumber == 2 {
                 //じゃんけんの数字が2の場合、チョキの画像を指定
@@ -41,9 +44,11 @@ struct ContentView: View {
                     .scaledToFit()
                 //.padding()
                 
+                Spacer()
+                
                 //テキスト
                 Text("scissors")
-                    .padding()
+                    .padding(.bottom)
                 
             } else if answerNumber == 3 {
                 //じゃんけんの数字が1,2以外の場合、パーの画像を指定
@@ -54,9 +59,11 @@ struct ContentView: View {
                     .scaledToFit()
                 //.padding()
                 
+                Spacer()
+                
                 //テキスト
                 Text("paper")
-                    .padding()
+                    .padding(.bottom)
                 
             }
             
@@ -87,6 +94,7 @@ struct ContentView: View {
                     .font(.title)
                     .background(.pink)
                     .foregroundColor(.white)
+                    .padding(.bottom)
             }
         }
     }
