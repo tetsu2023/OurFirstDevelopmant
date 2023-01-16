@@ -62,9 +62,25 @@ struct ContentView: View {
             
             
             //button
-            
             Button{
-                print("ボタンが押された")
+                //ランダムに数字の算出
+                answerNumber = Int.random(in: 1...3)
+                
+                var newAnswerNumber = 0
+                
+                //repeatで繰り返す
+                repeat {
+                    //ランダムに数字の算出
+                    newAnswerNumber = Int.random(in: 1...3)
+                    
+                    
+                }
+                //結果が異なる場合、repeatを抜ける
+                while answerNumber == newAnswerNumber
+                
+                //じゃんけんの結果を格納
+                answerNumber = newAnswerNumber
+                
             } label:{
                 Text("Let's play")
             }
